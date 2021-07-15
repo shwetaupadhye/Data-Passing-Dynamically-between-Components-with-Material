@@ -1,0 +1,15 @@
+<mat-accordion multi="true" *ngIf="posts.length > 0">
+    <mat-expansion-panel *ngFor="let post of posts">
+        <mat-expansion-panel-header>
+            <p>NAME: </p><h4>{{ post.name }}</h4>
+        </mat-expansion-panel-header>
+        <p>CONTACT NO: </p> <h4>{{ post.desc }}</h4> 
+        <p>ADDRESS:</p> <h4>{{ post.address }}</h4>
+        <p>PIN-CODE:</p> <h4>{{ post.contact }}</h4> 
+                <p>Email:</p><h4>{{ post.email }}</h4>
+
+    </mat-expansion-panel>
+</mat-accordion>
+<p class="info-text mat-body-1" *ngIf="posts.length <= 0">
+    No Content Available
+</p>
